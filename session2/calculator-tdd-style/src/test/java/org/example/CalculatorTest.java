@@ -79,8 +79,8 @@ public class CalculatorTest {
 
     @Test
     void testSubtractDouble() {
-        int result = calculator.subtract(5, 1);
-        assertEquals(4, result);
+        double result = calculator.subtract(5.0, 1.0);
+        assertEquals(4.0, result);
     }
 
     @Test
@@ -128,7 +128,7 @@ public class CalculatorTest {
     @Test
     void testMultiplyShort() {
         short result = calculator.multiply((short) 5, (short) 3);
-        assertEquals(15L, result, .0001);
+        assertEquals(15, result, .0001);
     }
 
     @Test
@@ -161,7 +161,7 @@ public class CalculatorTest {
         assertEquals(5, result, .0001);
     }
 
-    @Test(expected=Ari)
+    @Test
     void testDivideIntByZero() {
         int result = calculator.divide(15, 0);
         assertEquals(-1, result); // Dividing by zero should return -1
